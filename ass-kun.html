@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+<title>Lab 2.1</title> 
+<style type="text/css">
+    table{
+        border: 2px solid black;
+        width: 80px;
+        height: 30px;
+    }
+
+</style>
+</head>
+<body>
+
+<form>
+<label> Last Name:  </label> 
+    <input type = "text"  id="lname"> 
+
+<label> First Name: </label> 
+    <input type = "text" id="name"> <br> <br>
+
+<label> Section: </label> 
+    <input type = "text" id="sec">
+
+<label>  Year: </label> 
+    <input type = "number" id="year"> <br><br><hr>
+<label>  Quiz: </label> 
+    <input type = "number" id="quiz"> <br> <br>
+<label>  Assignment: </label> 
+    <input type = "number" id="ass"> <br> <br>
+<label>  Recitation: </label> 
+    <input type = "number" id="rec"> <br> <br>
+<label>  Term Exam: </label> 
+    <input type = "number" id="exam"> <br>  <br>
+<button type="button" onclick="oms()"> Show Computed Grades </button>
+
+    <p id="imao"> Name: (Last name, First Name)  </p>
+    <p id="maoi">Class: </p>
+
+
+<table>
+    <label>Quiz</label>
+    <td id="tebul"></td>
+</table>
+<br>
+<table>
+    <label>Assignment</label>
+    <td id="tebul1"></td>
+</table>
+<br>
+<table>
+    <label>Recitation</label>
+    <td id="tebul2"></td>
+</table>
+<br>
+<table>
+    <label>Term Exam</label>
+    <td id="tebul3"></td>
+</table>
+
+
+
+
+
+</form>
+
+<script type="text/javascript">
+
+    function oms(){
+    var a,b,c, d, e, f, g, h;
+    
+    
+  
+    
+     a=document.getElementById("name").value;
+     b=document.getElementById("lname").value;
+     c=document.getElementById("sec").value;
+     d=document.getElementById("year").value;
+     e=document.getElementById("quiz").value;
+     f=document.getElementById("ass").value;
+     g=document.getElementById("rec").value;
+     h=document.getElementById("exam").value;
+    
+     
+
+
+     document.getElementById ("imao").innerHTML = "Name: (Last name, First Name)" + b + ", " + a ; 
+     document.getElementById ("maoi").innerHTML = "Class: " + d + "-" + c;
+     document.getElementById("tebul").innerHTML= e;
+     document.getElementById("tebul1").innerHTML= f;
+     document.getElementById("tebul2").innerHTML= g;
+     document.getElementById("tebul3").innerHTML= h;
+
+     
+    
+    }
+    
+    </script>
+
+
+
+
+
+</body>
+</html>
